@@ -1,0 +1,8 @@
+replicas:
+  mongodb: 1
+  mongoExpress: 1
+
+# Secrets should be overriden
+secrets:
+  mongoRootUsername: "username"
+  mongoRootPassword: "password"

@@ -1,0 +1,7 @@
+{{- if eq .Values.services.mongodb.addressType "domain" }}
+  {{- include "mongodb-service-domain" . | indent 0 }}
+{{- else if eq .Values.services.mongodb.addressType "ip" }}
+  {{- include "mongodb-service-ip" . | indent 0 }}
+{{- else }}
+  {{- fail "value for .Values.services.mongodb.addressType is not expected" }}
+{{- end }}

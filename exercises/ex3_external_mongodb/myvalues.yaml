@@ -1,0 +1,13 @@
+# Secrets should be overriden
+secrets:
+  mongoRootUsername: "admin"
+  mongoRootPassword: "password"
+
+services:
+  mongodb:
+    # Either use `ip` or `domain`
+    addressType: ip   # `domain` or `ip`
+    # address: mongodb-service.com
+    address: "192.168.1.100"
+  mongoExpress:
+    replicas: 3
